@@ -14,6 +14,7 @@ Este repositorio contiene el código fuente de un proyecto de calorímetro digit
 
 ### Requisitos
 
+- CMake
 - Python 3.x
 - Librerías necesarias: `numpy`, `matplotlib` (opcional, para visualización de datos), y cualquier librería específica del sensor de temperatura utilizado (por ejemplo, `Adafruit_DHT` para sensores DHT).
 
