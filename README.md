@@ -19,19 +19,21 @@ Este repositorio contiene el código fuente de un proyecto de calorímetro digit
 ### Ejecución
 
 1. **Medición de Temperatura**:
-Si es la primera vez que ejecuta el código:
-   - Conecte su sensor de temperatura a su dispositivo.
-   - Abra el código `calorimetro.ino` con Arduino IDE:
-   - Presione en el boton de ejecutar y correr.
-Si no es la primera vez:
-   - Conecte el sensore de temperatura al dispositivo
+   
+   Si es la primera vez que ejecuta el código:
+      - Conecte su sensor de temperatura a su dispositivo.
+      - Abra el código `calorimetro.ino` con Arduino IDE:
+      - Presione en el boton de ejecutar y correr.
+        
+   Si no es la primera vez:
+      - Conecte el sensore de temperatura al dispositivo
      
-2. **Recolección de datos**:
+3. **Recolección de datos**:
    - Abrir coolterm
    - Presionar conectar o CTRL+K
    - Seleccionar coneccion > capturar a archivo de texto > start o CTRL+R
 
-3. **Cálculo de Capacidad Calorífica**:
+4. **Cálculo de Capacidad Calorífica**:
    - Asegúrese de tener el archivo `datos.txt` generado en el paso anterior.
    - Compile el código de `capacidad_calorifica.c` utilizando:
    ```bash
