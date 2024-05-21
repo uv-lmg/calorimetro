@@ -42,8 +42,8 @@ Este repositorio contiene el código del proyecto de calorímetro digital basado
    gcc capacidad_calorifica.c -o capacidad_calorifica
    ```
    
-   - Ejecutar el código compilado con ./capacidad_calorifica
-   - El script procesará los datos y calculará la capacidad calorífica, mostrando los resultados en la terminal y generando la gráfica si se habilita la visualización.
+   - Ejecutar el código compilado con `./capacidad_calorifica`
+   - El script procesará los datos y calculará su capacidad calorífica, mostrando los resultados en la terminal y generando la gráfica si se habilita la visualización.
 
 ## Contribución
 
