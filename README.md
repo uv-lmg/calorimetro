@@ -2,7 +2,7 @@
 
 Este repositorio contiene el código fuente de un proyecto de calorímetro digital desarrollado en Python. El proyecto está dividido en dos partes principales:
 
-1. **Medición de Temperatura**: Utilizando un sensor de temperatura, este código captura la temperatura de una muestra en intervalos regulares de tiempo.
+1. **Medición de Temperatura**: Utilizando un sensor de temperatura DS18B20, este código captura la temperatura de una muestra en intervalos regulares de tiempo.
 2. **Cálculo de Capacidad Calorífica**: Con los datos de temperatura obtenidos, este código calcula el tiempo necesario para cambios específicos en la temperatura y, posteriormente, determina la capacidad calorífica de la muestra.
 
 ## Estructura del Repositorio
@@ -13,28 +13,32 @@ Este repositorio contiene el código fuente de un proyecto de calorímetro digit
 ## Instrucciones de Uso
 
 ### Requisitos
-
 - CMake
-- Python 3.x
-- Librerías necesarias: `numpy`, `matplotlib` (opcional, para visualización de datos), y cualquier librería específica del sensor de temperatura utilizado (por ejemplo, `Adafruit_DHT` para sensores DHT).
+- Arduino IDE
 
 ### Ejecución
 
 1. **Medición de Temperatura**:
+Si es la primera vez que ejecuta el código:
    - Conecte su sensor de temperatura a su dispositivo.
-   - Ejecute el script `medicion_temperatura.py`:
-     ```bash
-     python medicion_temperatura.py
-     ```
-   - Este script almacenará las lecturas de temperatura en un archivo `datos_temperatura.csv`.
+   - Abra el código `calorimetro.ino` con Arduino IDE:
+   - Presione en el boton de ejecutar y correr.
+Si no es la primera vez:
+   - Conecte el sensore de temperatura al dispositivo
+     
+2. **Recolección de datos**:
+   - Abrir coolterm
+   - Presionar conectar o CTRL+K
+   - Seleccionar coneccion > capturar a archivo de texto > start o CTRL+R
 
-2. **Cálculo de Capacidad Calorífica**:
-   - Asegúrese de tener el archivo `datos_temperatura.csv` generado en el paso anterior.
-   - Ejecute el script `calculo_capacidad_calorifica.py`:
-     ```bash
-     python calculo_capacidad_calorifica.py
-     ```
-   - El script procesará los datos y calculará la capacidad calorífica, mostrando los resultados en la terminal y opcionalmente generando gráficos si se habilita la visualización.
+3. **Cálculo de Capacidad Calorífica**:
+   - Asegúrese de tener el archivo `datos.txt` generado en el paso anterior.
+   - Compile el código de `capacidad_calorifica.c` utilizando:
+   ```bash
+   gcc capacidad_calorifica.c -o capacidad_calorifica
+   ```
+   - Ejecutar el código compilado con ./capacidad_calorifica
+   - El script procesará los datos y calculará la capacidad calorífica, mostrando los resultados en la terminal y generando la gráfica si se habilita la visualización.
 
 ## Contribución
 
