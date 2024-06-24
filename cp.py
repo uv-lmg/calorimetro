@@ -11,12 +11,12 @@ temperature = []
 #mass = input()
 
 #print("Degrees of change = ")
-#chosen_one = input()
+#chosen_change = input()
 
 # Test values
 Q = 2160000
 mass = 15
-chosen_one = 1
+chosen_change= 1
 
 with open("output.txt", "r") as file:
     for line in file:
@@ -30,13 +30,13 @@ critical_times = []
 critical_temps = []
 
 for i, temp in enumerate(temperature):
-    if temp == reference_value - chosen_one:
+    if temp == reference_value - chosen_change:
         critical_times.append(time[i])
         critical_temps.append(temp)
         reference_value = temp
 
     else:
-        target_value = reference_value - chosen_one
+        target_value = reference_value - chosen_change
         closest_value = min(temperature, key=lambda x: abs(x - target_value))
         if closest_value == temp: #and closest_value != critical_temps[-1]:
             critical_times.append(time[i])
@@ -56,7 +56,7 @@ print("Total specific heat: " + str(specific_heat) + " J/(kg*K)")
 
 plt.plot(critical_temps, deltaTime, marker='o', linestyle='-')
 plt.xlabel('Temperature (Celsius)')
-plt.ylabel("Seconds per " + str(chosen_one) + " degrees of change")
+plt.ylabel("Seconds per " + str(chosen_change) + " degrees of change")
 plt.title('Time against temperature change')
 plt.grid(True)
 plt.show()
