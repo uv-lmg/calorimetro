@@ -8,7 +8,7 @@ Este repositorio contiene el código del proyecto de calorímetro digital basado
 ## Estructura del Repositorio
 
 - **calorimetro.ino**: Contiene el código necesario para ejecutar en el Arduino IDE, se encarga de obtener la temperatura y el tiempo de la medición de ésta.
-- **capacidad_calorifica.c**: Este script utiliza los datos obtenidos por el calorímetro y guardados en un archivo de texto o csv para calcular el tiempo transcurrido durante el experimento y, finalmente, calcular la capacidad calorífica de la muestra.
+- **cp.py**: Este código utiliza los datos obtenidos por el calorímetro guardados en un archivo de texto para calcular el tiempo transcurrido durante el experimento y su relación con el cambio de un cierto número de grados centigrados, finalmente, calcula la capacidad calorífica total del sistema.
 
 ## Instrucciones de Uso
 
