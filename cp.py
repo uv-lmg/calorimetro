@@ -3,13 +3,14 @@ import matplotlib.pyplot as plt
 time = []
 temperature = []
 
+# Remember that Q is equal to the TOTAL energy consumed, in Joules.
 #print("Q (in Joules) = ")
 #Q = input()
 
 #print("Mass (in grams) = ")
 #mass = input()
 
-#print("Degrees of change: ")
+#print("Degrees of change = ")
 #chosen_one = input()
 
 # Test values
@@ -17,7 +18,7 @@ Q = 2160000
 mass = 15
 chosen_one = 1
 
-with open("output3.txt", "r") as file:
+with open("output.txt", "r") as file:
     for line in file:
         t, temp = line.split()
         time.append(float(t))
@@ -50,7 +51,7 @@ for j, taken in enumerate(critical_times):
     
 specific_heat = Q/(mass*temp_sum)
 
-print("temp_sum")
+print("Total change in temperature: " + str(temp_sum))
 print("Total specific heat: " + str(specific_heat) + " J/(kg*K)")
 
 plt.plot(critical_temps, deltaTime, marker='o', linestyle='-')
