@@ -13,7 +13,6 @@ Este repositorio contiene el código del proyecto de calorímetro digital basado
 ## Instrucciones de Uso
 
 ### Requisitos
-- CMake
 - Arduino IDE
 - Coolterm o cualquier otro programa similar
 
