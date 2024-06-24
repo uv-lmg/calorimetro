@@ -35,15 +35,15 @@ Este repositorio contiene el código del proyecto de calorímetro digital basado
    - Seleccionar coneccion > capturar a archivo de texto > start o CTRL+R
 
 3. **Cálculo de Capacidad Calorífica**:
-   - Asegúrese de tener el archivo `datos.txt` generado en el paso anterior en la misma carpeta del código.
-   - Compile el código de `capacidad_calorifica.c` utilizando:
+   - Asegúrese de tener el archivo `output.txt` generado en el paso anterior en la misma carpeta del código.
+   - Ejecute el código de `cp.py` utilizando:
      
    ```bash
-   gcc capacidad_calorifica.c -o capacidad_calorifica
+   python3 cp.py
    ```
    
-   - Ejecutar el código compilado con `./capacidad_calorifica`
-   - El script procesará los datos y calculará su capacidad calorífica, mostrando los resultados en la terminal y generando la gráfica si se habilita la visualización.
+   - El script procesará los datos y calculará su capacidad calorífica, mostrando los resultados en la terminal y generando una gráfica si se habilita su visualización.
+
 
 ## Contribución
 
